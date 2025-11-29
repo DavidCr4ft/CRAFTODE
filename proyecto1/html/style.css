@@ -1,0 +1,259 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: linear-gradient( #1E2A38 60%,#39506B 80%, #55779E 100%);
+  color: #ffffff;
+  line-height: 1.6;
+  font-size: 20px;
+}
+
+/* HERO */
+.hero {
+  height: 100vh; 
+  width: 100%;
+  background-image:url(../img/fondoprogram1.jpg);
+  background-position: center;
+  background-size:cover ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  position: relative;
+  padding: 0 0px;
+}
+
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45); 
+  z-index: 1;
+}
+
+
+.hero h1,
+.hero p,
+.hero a {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+}
+
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  animation: fadeInUp 1.2s ease-out forwards;
+  opacity: 0;
+}
+
+.hero p {
+  font-size: 32px;
+  opacity: 0;
+  animation: fadeInUp 1.4s ease forwards;
+}
+
+
+.hero .btn {
+  margin-top: 25px;
+  padding: 12px 28px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 18px;
+  transition: 0.3s;
+  opacity: 0;
+  animation: fadeInUp 1.6s ease forwards;
+}
+
+.hero .btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: #fff;
+}
+
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+header {
+  background-color: #0D1117;
+  padding: 20px 30px; 
+  border-bottom: 2px solid #0ff;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ddd;
+  background-color: #1E2A38;
+  padding: 8px 15px;
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: #0ff;
+  color: #000;
+}
+
+.login-btn {
+  background-color: #0ff;
+  color: #000;
+}
+
+h2 {
+  color: #00e0ff;
+  margin-bottom: 10px;
+}
+
+h3 {
+  color: #00ffff;
+  margin-top: 15px;
+}
+
+section:not(.hero) {
+  margin: 100px 0;
+}
+
+.code-box {
+  background-color: #1E2A38;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 15px;
+}
+
+.code-box pre, article pre, code {
+  background-color: #001F3F;
+  color:white;
+  padding: 15px;
+  border-radius: 58px;
+  overflow-x: auto;
+}
+
+.beneficios ul, .languages ul, .areas ul 
+.code-box pre, article pre, code {
+  background-color: #001F3F;
+  color: whitesmoke;
+  padding: 40px;
+  border-radius: 52px;
+  overflow-x: auto;
+}
+
+.languages ul, .beneficios ul, .areas ul {
+  list-style: none;
+}
+
+.languages li, .beneficios li, .areas li {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.languages img {
+  vertical-align: middle;
+}
+
+/* Opiniones*/
+.opiniones {
+  max-width: 800px;
+  margin: auto;
+  text-align: center;
+}
+
+.opiniones input,
+.opiniones textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  border: none;
+  font-size: 16px;
+  color: #fff;
+  background: linear-gradient(#001F3F 40%, #0051A5 100%);
+  resize: none;
+}
+
+.opiniones button {
+  background-color: #20c1d6;
+  color: #000;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.opiniones button:hover {
+  background-color: #0ff;
+  transform: scale(1.05);
+}
+
+/* Footer  */
+footer {
+  text-align:center;
+  padding: 30px;
+  background-color: #170D10;
+  margin-top: auto;
+  border-top: 2px solid #00e0ff;
+  color: #aaa;
+}
+
+footer p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+
+
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-end;
+  }
+
+  .opiniones input,
+  .opiniones textarea {
+    font-size: 18px;
+  }
+}
